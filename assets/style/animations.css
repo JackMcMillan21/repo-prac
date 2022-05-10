@@ -1,0 +1,48 @@
+.animate-background:before {
+    animation: slide-in-bottom 1s ease-in-out both;
+  }
+  
+.animate-text-1 {
+    animation: fade-in-bottom 0.5s ease-in-out both;
+  }
+  
+.animate-text-2 {
+    animation: fade-in-bottom 0.5s ease-in-out 50ms both;
+  }
+  
+.animate-subtitle {
+    animation: fade-in-bottom 0.5s ease-in-out 100ms both;
+  }
+  
+  
+  @media (prefers-reduced-motion) {
+    .animate-background:before,
+    .animate-text-1,
+    .animate-text-2,
+    .animate-subtitle {
+      opacity: 1;
+      animation: none;
+    }
+  }
+
+  @keyframes fade-in-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

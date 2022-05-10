@@ -1,0 +1,66 @@
+/* -------------------------- */
+/* --------- Header ----------*/
+/* -------------------------- */
+
+#logo{
+  color: #595959;
+}
+
+.nav-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+  
+  .container, .header-container {
+    position: relative;
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .flexbox{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  nav {
+    height: 60px;
+    overflow: hidden;
+    color: white;
+  }
+
+  
+  nav ul {
+    list-style: none;
+    font-size: 0;
+    padding-right: 15px;
+  }
+  
+  nav ul li {
+    display: inline;
+    line-height: 60px;
+    cursor: default;
+  }
+  
+  nav ul li a {
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: #595959;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  nav ul li a:hover {
+    color:  #ADD8E6;
+  }
+
+  nav ul li + li {
+    margin-left: 10px;
+  }
