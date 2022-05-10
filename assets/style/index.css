@@ -1,7 +1,7 @@
 @import "base.css";
 
 body {
-  background-color: #eff;
+  background-color: rgb(230, 230, 230);
 }
 
 .main-background {
@@ -47,7 +47,18 @@ header h1 p {
   text-align: left;
   line-height: 130%;
   letter-spacing: -0.03em;
+}
+
+.animate-text-1{
   color: black;
+}
+
+.animate-text-2{
+  color:white;
+}
+
+.animate-subtitle{
+  color: white;
 }
 
 header h2 {
@@ -65,7 +76,7 @@ header .fixed-header {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #eff;
+  background-color: rgb(230, 230, 230);
 }
 
 header.js-fixed .fixed-header {
@@ -82,7 +93,7 @@ header .fixed-header:before {
   content: "";
   z-index: 0;
   position: absolute;
-  background-color: #595959;
+  background-color: #6f00ff;
   width: 100%;
   height: 50%;
   margin: auto;
@@ -137,24 +148,25 @@ header .header-text {
 }
 
 input[type="button"] {
-  border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: transparent;
-  border-radius: 8px;
-  color: black;
+  border-radius: 50px;
+  color: white;
+  letter-spacing: 1px;
   font-size: 18px;
   font-weight: 400;
   text-align: center;
   transform: perspective(1px) translateZ(0);
   backface-visibility: hidden;
   cursor: pointer;
-  padding: 16px 32px;
-  border: #595959 1px solid;
+  padding: 12px 28px;
+  border: #6f00ff 2px solid;
   margin-top: 16px;
+  background-color: #6f00ff;
 }
 
 .body-container{
   width: 100%;
-  background-color: #595959;
+  background-color: #1c1b2a;
   margin-top: 40px;
   height: fit-content;
 }
@@ -185,8 +197,8 @@ input[type="button"] {
 }
 
 .left-column{
-  width: 65%;
-  max-width: 500px;
+  width: 70%;
+  margin-right: 40px;
 }
 
 .project img{
@@ -196,7 +208,7 @@ input[type="button"] {
 
 .bottom{
   height: 100px;
-  background-color: #717171;
+  background-color: #363451;
   width: 100%;
   margin-top: -5px;
   border-radius: 0px 0px 4px 4px;
@@ -207,7 +219,7 @@ input[type="button"] {
 
 .right-column{
   width: 30%;
-  background-color: #595959;
+  background-color: #1c1b2a;
   border-radius: 8px;
 }
 
@@ -245,7 +257,8 @@ input[type="button"] {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #717171;
+  background-color: #363451;
+  border-radius: 4px;
 }
 
 #user-image{
@@ -280,11 +293,12 @@ input[type="button"] {
 
 .row i{
   margin-right: 15px;
-  cursor: pointer;
 }
 
-.row p{
+.row a{
   cursor: pointer;
+  color: white;
+  text-decoration: none;
 }
 
 .latest-upload{
@@ -292,8 +306,9 @@ input[type="button"] {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #717171;
+  background-color: #363451;
   justify-content: flex-start;
+  border-radius: 4px;
 }
 
 
@@ -307,4 +322,62 @@ input[type="button"] {
   height: 75px;
   width: 100px;
   margin: 0 15px 15px 15px;
+}
+
+@media only screen and (max-width: 940px) {
+  .projects{
+    flex-direction: column-reverse;
+  }
+
+  .user-info{
+    width: 70%;
+  }
+
+  .latest-upload{
+    margin-left: 40px;
+    margin-top: 0;
+    height: fit-content;
+    padding: 0 15px 0 15px;
+  }
+  .right-column{
+    width: 100%;
+    display:flex;
+    margin-bottom: 40px;
+  }
+
+  .left-column{
+    width: 100%;
+  }
+  .center-container{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+
+  .latest-upload{
+    display: none;
+  }
+
+  .user-info{
+    width: 100%;
+  }
+
+  .contact-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .row{
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .center-container{
+    width: 90%;
+  }
 }
